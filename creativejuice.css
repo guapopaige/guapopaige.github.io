@@ -1,12 +1,27 @@
-@import url(https://fonts.googleapis.com/css?family=Josefin+Sans:300,400);
-* {
+@import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');* {
   margin: 0;
   padding: 0;
 }
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 body{
 	max-width:1700px;
-	background-color:#ffffff;
+	background-color:#212529;
 }
+/*---Global Styles---*/
+
+h2 {
+  font-family: 'Press Start 2P', cursive;	color:#90be6d;
+  font-size: 36px;
+}
+h3 {
+  font-family: 'Press Start 2P', cursive;	color:black;
+  font-size: 26px;
+}
+p	{
+  font-family: 'Quicksand', sans-serif;
+  color:white;
+}
+
 
 /*--header--*/
 
@@ -15,24 +30,57 @@ body{
 	margin-bottom: -50px;
 }
 #jumbo-header{
-	font-family: 'Bitter', serif;
-	color:white;
-	text-align: center;
+  font-family: 'Press Start 2P', cursive;	color:white;
+	text-align: right;
+  padding-right: 5%;
 }
 
 .jumbotron{
-	
-	background-image:url('abstract.jpg');
-	background-position: center;
-	background-attachment:fixed;
-	background-repeat: no-repeat;
-	background-size:cover;
-	height: 800px;
+  position: relative;
+  overflow: hidden;
+  padding:0px !important;
+ }
+.container .text-center{
+  z-index: 1000 !important;
+}
+.video-background:before{
+ left: 0;
+ right: 0;
+ top: 0;
+ bottom: 0;
+ position: absolute;
+ content: "";
+}
+.video-background {
+  position: relative;
+ background: #222;
+width:100%;
+z-index:5;
+  }
+#video-background{
+ background-size: cover;
+}
+.cover-text{
+position:absolute;
+width:100%;
+text-align:center;
+z-index:9999;
+top:5em;
 }
 
+.cover-text h1, .cover-text p{
+color:#fff !important;
+ }
 .header-inner {
-	margin-top: 200px;
+	margin-top: 10%;
 }
+
+
+
+#aboutme{
+  margin-top:10%;
+}
+
 
 
 
@@ -42,15 +90,15 @@ a,
 a:focus,
 a:hover {
 	font-size: 16px;
-	font-family: 'Bitter', serif;
+	font-family: 'Quicksand', sans-serif;
 	-moz-transition: color 0.5s;
 	-webkit-transition:color 0.5s;
 	transition: color 0.5s;
 }
 
 .navbar-fixed-top {
-	height: 10%;
-	padding: .5% 5% .5% 5%;	
+	height: 9%;
+	padding: .5% 5% .5% 5%;
 }
 .navbar-brand{
 	padding: 0px;
@@ -58,14 +106,14 @@ a:hover {
 .navbar-brand > img{
 	max-height: 100%;
    height: 100%;
-   width: auto; 
+   width: auto;
    margin: 0 auto;
    -o-object-fit: contain;
-   object-fit: contain; 
+   object-fit: contain;
 
 }
 .contactnav{
-	background:#000000;
+	background:#343a40;
 }
 .navbar-toggle {
 	position: relative;
@@ -75,7 +123,7 @@ a:hover {
 	background-color: transparent;
 	background-image: none;
 	border-radius: 4px;
-	border: 1px solid #ffd700;
+	border: 1px solid #343a40;
 }
 
 .icon-bar {
@@ -83,12 +131,12 @@ a:hover {
 	width: 22px;
 	height: 2px;
 	border-radius: 1px;
-	border: 1px solid #ffd700;
+	border: 1px solid white;
 }
 
  .fixednav {
-	 background: #253237;
-	 border: .5px solid #000000;
+	 background: #343a40;
+	 border-bottom: .5px solid #000000;
 	   -webkit-transition: all 0.5s ease;
     -moz-transition: all 0.5s ease;
     -o-transition: all 0.5s ease;
@@ -96,8 +144,7 @@ a:hover {
  }
 .navbar-nav > li > a {
   font-weight: bold;
-  color: #000000; /* IE8 proofing */
-  color: black;
+  color: white;
   border-bottom: 2px solid transparent;
   background-color: transparent;
 }
@@ -105,22 +152,44 @@ a:hover {
 .navbar-nav > li > a:hover,
 .navbar-nav > li > a:focus {
   background-color: transparent;
-  color: #c0c0c0;
-  border-bottom-color: #a9a9a9;
-  border-bottom-color: #FFD700;
+  color: #90be6d;
+  border-bottom-color: #f72585;
 }
 .navbar-nav > .active > a,
 .navbar-nav > .active > a:hover,
 .navbar-nav > .active > a:focus {
-  color: #FFD700;
+  color: #90be6d;
 }
+
+
+
+/*---Section---*/
+div.syntaxpb{
+   background-image: url("syntaxpurp.png");
+   background-attachment:fixed;
+   background-repeat: no-repeat;
+   background-size:cover;
+   height:200px;
+   margin-top:10%;
+}
+
+div.mac{
+  background-image: url("circuit.png");
+  background-attachment:fixed;
+  background-repeat: no-repeat;
+  background-size:cover;
+  height:400px;
+  margin-top:7%;
+  margin-bottom:10%;
+}
+
 
 
 /*--Skill Card--*/
 h1.subheading {
-	font-family: 'Bitter', serif;
-	font-size: 48px;
-	color:#000000;
+	font-family: 'Press Start 2P', cursive;	color:#90be6d;
+	font-size: 36px;
+	color:#90be6d;
 	margin-bottom: 100px;
 	text-align:center;
 	opacity:0;
@@ -131,6 +200,12 @@ h1.subheading.fade-in{
 	opacity:1;
 	transform: translateY(0px);
 }
+h2.card-heading{
+  font-size: 18px;
+  text-align: center;
+  color:#90be6d;
+
+}
 
 div.col-md-4.text-center.icon_cardMid{
 	border:.2px solid #000000;
@@ -140,6 +215,7 @@ div.col-md-4.text-center.icon_cardMid{
 
 div#skill-card{
 	transition: transform 1s;
+  background-color: #343a40;
 }
 div#skill-card:hover{
 	transform:translate(0px,-20px);
@@ -149,45 +225,23 @@ div.box-shadow{
 	height:400px;
 	margin-left:6%;
 	box-shadow: 0px 0px 60px -3px rgba(0,0,0,0.60);
+  border-radius: 10px;
 -webkit-box-shadow: 0px 0px 60px -3px rgba(0,0,0,0.60);
 -moz-box-shadow: 0px 0px 60px -3px rgba(0,0,0,0.60);
 }
 
 div.card-inner{
-	padding: 10px 25px 15px 25px;
-}
-	
-
-/*--Contact Banner--*/
-.container-fluid#Banner {
-	width:100%;
-	background-color: #ebecea;
-	height:auto;
-	text-align:center;
-	color: #000000;
-	padding-bottom:50px;
-}
-#banner-header {
-	color: #000000;
-	font-family: 'Bitter', serif;
-	font-size: 48px;
-	padding-top: 50px;
-}
-.btn.btn-outline-warning{
-	background-color: transparent;
-	border-color:#ffd700;
-}
-span.glyphicon{
-	padding-right:5px;
+	padding: 10% 5% 15% 5%;
 }
 
-/*--End Contact--*/
+
+
 
 
 #container2-skill-cards {
 	display:inline-block;
 	margin-top: 160px;
-	margin-bottom:120px;
+	margin-bottom:100px;
 }
 #section-break{
 	height: 0;
@@ -207,7 +261,7 @@ span.glyphicon{
 	height: 80px;
 }
 h2 {
-	font-family: 'Bitter', serif;
+  font-family: 'Press Start 2P', cursive;	color:black;
 	font-size: 24px;
 	color: black;
 }
@@ -225,6 +279,8 @@ p#scene-3.fade-in{
 	transform: translateX(0);
 }
 h2#scene-2{
+  font-size: 36px;
+  color:#90be6d;
 	opacity:0;
 	transform: translateX(-70px);
 	transition: all 2s ease-out;
@@ -242,10 +298,12 @@ img#scene-1.fade-in{
 	opacity:1;
 	transform: translateY(0);
 }
-	
+
 .biopic img{
-	box-shadow: 10px 10px 5px grey;
-	
+  box-shadow: 0px 0px 60px -3px rgba(0,0,0,0.60);
+  border-radius: 10px;
+  -webkit-box-shadow: 0px 0px 60px -3px rgba(0,0,0,0.60);
+  -moz-box-shadow: 0px 0px 60px -3px rgba(0,0,0,0.60);
 }
 
 .no-padding{
@@ -291,12 +349,63 @@ footer{
 }
 
 
+
+
+
+
+/*-- Contact Me Section--*/
+
+.contact-section{
+  padding-bottom:15%;
+  padding-top:5%;
+  background-color: #212529;
+}
+.contact-form{
+  background-color:#343a40;
+}
+
+h3.form-title {
+	font-family: 'Press Start 2P', cursive;
+  color:#90be6d;
+	font-size: 36px;
+	margin:8% 0 4% 0;
+	text-align:center;
+}
+.contact-p	{
+  font-family: 'Quicksand', sans-serif;
+  color: white;
+  margin-bottom:2%;
+}
+.form-shadow{
+  height:450px;
+  box-shadow: 0px 0px 60px -3px rgba(0,0,0,0.60);
+  border-radius: 10px;
+  -webkit-box-shadow: 0px 0px 60px -3px rgba(0,0,0,0.60);
+  -moz-box-shadow: 0px 0px 60px -3px rgba(0,0,0,0.60);
+}
+.message-field{
+  margin-top:2%;
+}
+.contact-btn{
+  margin-top:2%;
+}
+
+/*--End Contact Me Section--*/
+
+
+
+
+
+
+
+
+
 /*--Media Queries --*/
 @media only screen and (min-device-width:768px) and (max-device-width:900px){
 	nav.navbar-right.navbar-fixed-top.fixednav{
-		height: 5%;
+		height: 10%;
 	}
-	
+
 	div.container-fluid#maincontent{
 		padding: 5% 15% 0 15% !important;
 	}
@@ -304,13 +413,18 @@ footer{
 	div#container_hr2 {
 		display:none;
 	}
+  h2.card-heading{
+    font-size: 14px;
+    text-align: center;
+
+  }
 }
-@media only screen and (min-device-width:320px) and (max-device-width:555px) { 
-	
+@media only screen and (min-device-width:320px) and (max-device-width:555px) {
+
 	nav.navbar-right.navbar-fixed-top.fixednav{
-		height: 5%;
+		height: 9%;
 	}
-	
+
 	div.container-fluid#maincontent{
 		padding: 5% 15% 0 15% !important;
 	}
@@ -320,6 +434,20 @@ footer{
 	}
 
 	div#skill-card{
-		height: ;
-	}
+		margin-bottom:5%;
+    margin-right:8%;
+  }
+
+    .collapse{
+  height: auto;
+  widgth: 100%;
+  background-color: #343a40;
+  }
+  h3.form-title{
+    font-family: 'Press Start 2P', cursive;
+    color: #90be6d;
+    font-size: 24px;
+    margin: 12% 0 4% 0;
+    text-align: center;
+  }
  }
