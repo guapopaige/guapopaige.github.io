@@ -19,7 +19,7 @@
 	<!--Header-->
 	<nav class="navbar-right navbar-fixed-top" role="navigation">
 		<a class="navbar-brand navbar-left" href="">
-			<img src="white.png" alt="brand" style="height:75px;width:75px;">
+			<img id="brand-logo" src="white.png" alt="brand">
 		</a>
 		<div class="navbar-header animated-collapse-icon">
 			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -141,7 +141,7 @@
 			</div>
 		</div>
 
-		<div class="container-fluid mac"></div>
+		<div class="mac img-responsive"></div>
 
 
 <!-- Contact Section -->
@@ -149,17 +149,24 @@
 <div class="container-fluid contact-section">
 	<div class="row">
 		<div class="col-md-8 col-sm-8 col-md-offset-2 col-sm-offset-2 form-shadow contact-form">
+
 			<h3 class="form-title">Contact Me Now</h3>
 			<p class="contact-p text-center">I'm available for free business consulting, and currently accepting all business inquiries!</p>
 			<p class="contact-p text-center">Phone Number: 804-475-2388 Email: gabrielpaige.design@gmail.com</p>
-			<div class="col-md-6 col-md-offset-3 col-sm-6 col-sm-offset-3">
-				<input type="email" class="form-control" id="inputEmail3" placeholder="Enter Name or Business"> </div>
-			<div class="col-md-6 col-md-offset-3 col-sm-6 col-sm-offset-3">
-				<textarea class="form-control message-field" rows="3" placeholder="Text"></textarea>
-			</div>
-			<div class="col-md-6 col-md-offset-3 col-sm-6 col-sm-offset-3">
-				<button type="submit" class="btn btn-default contact-btn">Send Message</button>
-			</div>
+
+
+			<form action="https://formsubmit.co/gabrielpaige.design@gmail.com" method="POST">
+				<div class="col-md-6 col-md-offset-3 col-sm-6 col-sm-offset-3">
+					<input type="email" class="form-control" id="inputEmail3" placeholder="Enter Email" required> </div>
+					<div class="col-md-6 col-md-offset-3 col-sm-6 col-sm-offset-3">
+						<textarea class="form-control message-field" rows="3" placeholder="Text" required></textarea>
+					</div>
+
+					<div class="col-md-6 col-md-offset-3 col-sm-6 col-sm-offset-3">
+						<button type="submit" class="btn btn-default contact-btn">Send Message</button>
+					</div>
+			</form>
+
 		</div>
 	</div>
 </div>
