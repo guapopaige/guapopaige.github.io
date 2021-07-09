@@ -412,7 +412,7 @@ h3.form-title {
 @media only screen and (min-device-width:768px) and (max-device-width:900px){
   #video-background{
    background-size: cover;
-   height:400px;
+   height:700px;
   }
 	nav.navbar-right.navbar-fixed-top.fixednav{
 		height: 10%;
